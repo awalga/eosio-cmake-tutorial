@@ -1,4 +1,4 @@
-# eosio-cmake-examples
+# eosio-cmake-tutorial
 An example of Clion project using CMake build scripts
 
 ## Table of Contents
@@ -15,7 +15,7 @@ An example of Clion project using CMake build scripts
 - [License](#license)
 
 ## Overview
-This is an example of eosio smart contract build based on Cmake and Clion. The projects containes 2 targets `hello`, `tic_tac_toe`.
+This is an example of eosio smart contract build based on CMake and Clion. The projects containes 2 targets `hello`, `tic_tac_toe`.
 
 ## Prerequisites
 Please see [eosio cmake prerequisites](https://github.com/awalga/eosio-cmake/blob/master/README.md#prerequisites)
@@ -27,17 +27,17 @@ CMake handles our dependencies and detects our targets. Hence target are accessi
 
 ### Build from cmd line
 ```
-git clone https://github.com/awalga/eosio-cmake-examples.git
-cd eosio-cmake-examples
+git clone https://github.com/awalga/eosio-cmake-tutorial.git
+cd eosio-cmake-tutorial
 mkdir build && cd build
-cmake ..
+mkdir install && cmake -DCMAKE_INSTALL_PREFIX=install ..
 make contracts
 ```
 
 ## How it works
 
 ### Step 1:
-We imports `eosiosdk.cmake` `eosiosdk-util.cmake` `FindEOSIOSDKLibs.cmake` available here [](https://github.com/awalga/eosio-cmake) in our root CMakeLists.
+We imports `eosiosdk.cmake` `eosiosdk-util.cmake` `FindEOSIOSDKLibs.cmake` available here [eosio cmake](https://github.com/awalga/eosio-cmake) in our root CMakeLists.
 ```
 ################################
 ## Cmake dependencies
